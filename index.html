@@ -30,7 +30,7 @@
           var r = Math.round(jscolor.rgb[0]);
           var g = Math.round(jscolor.rgb[1]);
           var b = Math.round(jscolor.rgb[2]);
-          $.get( "http://192.168.1.219/color?r=" + r + "&g=" + g + "&b=" + b, function( data ) {
+          $.get( "http://192.168.1.219/color.json?r=" + r + "&g=" + g + "&b=" + b, function( data ) {
             alert( "Load was performed." );
           });
       }
