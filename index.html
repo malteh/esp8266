@@ -31,8 +31,7 @@
           var g = Math.round(jscolor.rgb[1]);
           var b = Math.round(jscolor.rgb[2]);
           $.get( "http://192.168.1.219/color?r=" + r + "&g=" + g + "&b=" + b, function( data ) {
-            $( ".result" ).html( data );
-            //alert( "Load was performed." );
+            alert( "Load was performed." );
           });
       }
       </script>
