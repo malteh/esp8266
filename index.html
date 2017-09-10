@@ -14,32 +14,16 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
+
       <script src="js/jscolor.js"></script>
+      <p><input id="jscolor" class="jscolor" onchange="update(this.jscolor)" value="cc66ff"><br /></p>
+      <p><button id="rainbow" class="rainbow" onclick="rainbow()">rainbow</button></p>
 
-      <p>'onchange' fires after the mouse button is released
-
-      <p>Rectangle color:
-      <input class="jscolor" onchange="update(this.jscolor)" value="cc66ff">
-
-      <p id="rect" style="border:1px solid gray; width:161px; height:100px;">
-
-      <script>
-      function update(jscolor) {
-          // 'jscolor' instance can be used as a string
-          document.getElementById('rect').style.backgroundColor = '#' + jscolor
-          var r = Math.round(jscolor.rgb[0]);
-          var g = Math.round(jscolor.rgb[1]);
-          var b = Math.round(jscolor.rgb[2]);
-          $.getJSON( "http://192.168.1.219/color?r=" + r + "&g=" + g + "&b=" + b, function( data ) {
-            //alert( "Load was performed." );
-          });
-      }
-      </script>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/esp8266.js"></script>
     </body>
 </html>
